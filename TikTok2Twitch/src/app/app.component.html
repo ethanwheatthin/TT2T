@@ -1,27 +1,21 @@
-<div id="toolbar" style="background-color: grey; height: 100px; width: 100%;">
-</div>
+<app-toolbar></app-toolbar>
 
-<div fxLayout="row" fxLayoutAlign="space-around center">
-    <div fxLayout="column" fxLayoutAlign="space-around center" id="TikTokMessages" style="height: 500px; width: 50%; background-color: black;">
+<section fxLayout="row" fxLayoutAlign="center center" style="    flex-direction: row;
+display: flex;">
+    <div fxLayout="column" fxLayoutAlign="space-around center" id="TikTokMessages" style="height: 350px; width: 50%; background-color: azure; overflow: auto;">
         <h1>Tik Tok Messages:</h1>
         <mat-card *ngFor="let result of this.messages" class="mat-mdc-card-outlined">
             <mat-card-title>
-                <h2>{{result.uniqueId}}</h2>
+                <h2>@{{result.uniqueId}}</h2>
             </mat-card-title>
             <mat-card-content>
                 <h4>{{result.comment}}</h4>
             </mat-card-content>
           </mat-card>
     </div>
-    <div fxLayout="column" fxLayoutAlign="space-around center" id="TikTokMessages">
-        <h1>Twitch Messages:</h1>
-        <mat-card *ngFor="let result of this.messages" class="mat-mdc-card-outlined">
-            <mat-card-title>
-                <h2>{{result.uniqueId}}</h2>
-            </mat-card-title>
-            <mat-card-content>
-                <h4>{{result.comment}}</h4>
-            </mat-card-content>
-          </mat-card>
+
+    <div style="height: 350px; width: 50%; background-color: blue;">
+
     </div>
-</div>
+
+</section>
